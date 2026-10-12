@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "project_tests": 74,
+  "sdk_tests": 12,
+  "total_tests": 86,
+  "generated_action_steps": 4500,
+  "deposit_fragments_equivalence": 10007,
+  "failed_claims_followed_by_success": 100,
+  "native_max_members_and_u128_case": 16,
+  "actual_avm_accounting": {
+    "received": 10010,
+    "paid": 10010,
+    "claimable": 0,
+    "pending": 0,
+    "dust": 0,
+    "paused": false,
+    "claim_attempts": 5,
+    "members": [
+      {
+        "claimable": 0,
+        "paid": 5005,
+        "pending": 0,
+        "last_callback_lt": 56
+      },
+      {
+        "claimable": 0,
+        "paid": 3003,
+        "pending": 0,
+        "last_callback_lt": 64
+      },
+      {
+        "claimable": 0,
+        "paid": 2002,
+        "pending": 0,
+        "last_callback_lt": 72
+      }
+    ]
+  },
+  "receiver_totals": [
+    5005,
+    3003,
+    2002
+  ],
+  "audit_totals": [
+    5005,
+    3003,
+    2002
+  ],
+  "audit_counts": [
+    2,
+    1,
+    1
+  ],
+  "duplicate_audit_report_did_not_double_credit": true,
+  "actual_avm_accepted_input_count": 59,
+  "replay_roots_fees_and_count_match": true,
+  "batch_probe": [
+    {
+      "batch_messages": 1,
+      "patch_count": 1,
+      "patch_payload_bytes": 32,
+      "encoded_output_bytes": 219,
+      "full_state_bytes": 65540,
+      "full_replace_output_bytes": 65715
+    },
+    {
+      "batch_messages": 8,
+      "patch_count": 3,
+      "patch_payload_bytes": 96,
+      "encoded_output_bytes": 1364,
+      "full_state_bytes": 65540,
+      "full_replace_output_bytes": 66772
+    },
+    {
+      "batch_messages": 64,
+      "patch_count": 3,
+      "patch_payload_bytes": 96,
+      "encoded_output_bytes": 9820,
+      "full_state_bytes": 65540,
+      "full_replace_output_bytes": 75228
+    },
+    {
+      "batch_messages": 256,
+      "patch_count": 3,
+      "patch_payload_bytes": 96,
+      "encoded_output_bytes": 38812,
+      "full_state_bytes": 65540,
+      "full_replace_output_bytes": 104220
+    }
+  ],
+  "measurement_scope": "Native serialized state/output bytes; not FUEL or throughput",
+  "runtime_scope": "Pinned local stand, same DApp only",
+  "mainnet_deployment": false,
+  "third_party_security_audit": false,
+  "hosted_ci_run": false
+}

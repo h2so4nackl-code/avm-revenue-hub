@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "contracts": {
+    "vault": {
+      "exports": [
+        "memory",
+        "avm_guest_alloc",
+        "avm_guest_free",
+        "init",
+        "process_message"
+      ],
+      "host_imports": 0,
+      "sha256": {
+        "contract.wasm": "7e5ad75ceca5fb0ff5af542861d105ae9cf77e9632cb45ec62043e67e26c1e4d",
+        "contract.acab": "0f0c41a84393ee45535fde072b2fb55883aed14444ddbaf41662256285b7797c",
+        "contract.descriptor": "5657064adfa9d91dbcdce1700071b7e397ffb68c4632a48df1eddf48205c9f56"
+      },
+      "wasm_bytes": 58227
+    },
+    "receiver": {
+      "exports": [
+        "memory",
+        "avm_guest_alloc",
+        "avm_guest_free",
+        "init",
+        "process_message"
+      ],
+      "host_imports": 0,
+      "sha256": {
+        "contract.wasm": "cba9c51c1aeca7861fc704a698c7797dab0463a9d027b182aac959d77f21db90",
+        "contract.acab": "e0502b21192aa653ec920eb92641d3b413873e6987a0082de8d600a9fb49977b",
+        "contract.descriptor": "874538c8bad1b28321b3547aea8a5d92066b66eefa0b7f4239961e34123633a6"
+      },
+      "wasm_bytes": 37175
+    },
+    "audit": {
+      "exports": [
+        "memory",
+        "avm_guest_alloc",
+        "avm_guest_free",
+        "init",
+        "process_batch",
+        "process_message"
+      ],
+      "host_imports": 0,
+      "sha256": {
+        "contract.wasm": "1d49834bed5dbaae1b70503a0c764eb3d9ae04493aba5289a691c0f85d493974",
+        "contract.acab": "97a2c23f225da59eb76c3aedc781d610745e85b5f8e45cfe960e914dfbc8e6ed",
+        "contract.descriptor": "4f7e751e266c9718e05687da20f21baf19e53d99bdea696ca3cf7aa77ce9907d"
+      },
+      "wasm_bytes": 55661
+    }
+  }
+}

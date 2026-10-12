@@ -1,0 +1,5 @@
+batch_messages,patch_count,patch_payload_bytes,encoded_output_bytes,full_state_bytes,full_replace_output_bytes
+1,1,32,219,65540,65715
+8,3,96,1364,65540,66772
+64,3,96,9820,65540,75228
+256,3,96,38812,65540,104220

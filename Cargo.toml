@@ -1,0 +1,15 @@
+[workspace]
+members = ["core", "contracts/vault", "contracts/receiver", "contracts/audit", "tests", "vendor/avm-contract-sdk"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.86.0"
+license-file = "vendor/SDK-LICENSE.md"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

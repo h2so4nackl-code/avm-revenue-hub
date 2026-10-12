@@ -1,0 +1,195 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running unittests src/lib.rs (target/debug/deps/avm_contract_sdk-cb36f5a0e4f39823)
+
+running 8 tests
+test output::work::checked_sizes_reject_arithmetic_overflow ... ok
+test runtime::tests::direct_dispatch_writes_once_without_the_vec_growth_path ... ok
+test runtime::tests::dispatch_failure_capacity_and_overflow_leave_input_owned ... ok
+test runtime::tests::bounded_writer_failures_release_only_the_output_reservation ... ok
+test runtime::tests::direct_message_sections_and_batch_match_the_public_serializer ... ok
+test runtime::tests::batch_dispatch_preserves_count_mode_and_failed_index_checks ... ok
+test runtime::tests::dispatch_preserves_live_input_and_lifo_output_ownership ... ok
+test runtime::tests::ten_thousand_wallet_sized_outputs_remove_observed_vec_growth_and_copy ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+
+     Running tests/canonical_io.rs (target/debug/deps/canonical_io-9ff382a9ccca53e0)
+
+running 4 tests
+test malformed_or_noncanonical_frames_fail_closed ... ok
+test acmi_decode_and_acmo_encode_cover_all_effect_sections ... ok
+test acbi_decode_and_acbo_encode_preserve_indexes_and_statuses ... ok
+test output_bytes_and_error_precedence_are_frozen ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_revenue_audit-a0e0778e1f83942e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_revenue_core-2824800e2a45a3ba)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_revenue_receiver-46203601a6d5df16)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_revenue_tests-479716de7160b032)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/batch_probe.rs (target/debug/deps/batch_probe-52c8b643039d9ff9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/accounting.rs (target/debug/deps/accounting-21a71cdf457a2f9a)
+
+running 37 tests
+test callback_cannot_come_from_another_recipient ... ok
+test config_and_state_truncations_do_not_panic ... ok
+test carried_rounding_dust_becomes_claimable ... ok
+test claims_pay_fixed_destinations_and_clear_only_after_receipt ... ok
+test callback_must_match_the_active_nonce_and_amount ... ok
+test deposit_overflow_is_atomic ... ok
+test config_and_state_are_canonical ... ok
+test duplicate_claim_is_blocked_while_pending ... ok
+test deposit_requires_value_and_accepts_only_shell_as_extra ... ok
+test duplicate_recipient_keys_are_rejected ... ok
+test duplicate_signers_are_rejected ... ok
+test duplicate_destinations_are_rejected ... ok
+test entitlement_handles_u128_max_without_multiplication_overflow ... ok
+test full_u128_deposit_preserves_all_member_obligations ... ok
+test init_rejects_non_manager ... ok
+test initialization_rejects_an_untested_cross_dapp_destination ... ok
+test entitlement_matches_integer_reference_for_small_values ... ok
+test invalid_member_count_or_unused_entries_are_rejected ... ok
+test failure_must_return_exact_principal ... ok
+test failed_delivery_restores_claimable_without_marking_paid ... ok
+test duplicate_success_is_rejected_after_settlement ... ok
+test nonce_exhaustion_fails_without_effects ... ok
+test new_revenue_accrues_during_pending_payment ... ok
+test ordinary_internal_message_cannot_impersonate_callback ... ok
+test old_failure_receipt_cannot_unlock_later_attempt ... ok
+test other_members_can_claim_while_one_transfer_is_pending ... ok
+test shareholder_weights_must_sum_to_10000 ... ok
+test payout_refuses_missing_operating_shell_or_insolvent_principal ... ok
+test out_of_order_callback_lt_is_rejected_even_with_new_hash ... ok
+test zero_keys_addresses_weights_and_reserves_are_rejected ... ok
+test principal_state_corruption_fails_closed ... ok
+test wrong_member_signer_cannot_claim ... ok
+test status_remains_available_while_paused_and_pending ... ok
+test sixteen_beneficiaries_can_hold_and_settle_full_u128_revenue_concurrently ... ok
+test more_than_64_failures_remain_retryable ... ok
+test fragmentation_cannot_change_distribution ... ok
+test varied_deposits_and_claim_orders_preserve_conservation ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.62s
+
+     Running tests/audit.rs (target/debug/deps/audit-46ac2bac1220e72a)
+
+running 13 tests
+test invalid_retained_padding_fails_closed ... ok
+test audit_uses_65540_bytes_but_patches_only_one_32_byte_record ... ok
+test audit_binding_requires_owner_and_is_once_only ... ok
+test batch_size_limit_is_explicit ... ok
+test audit_rejects_attached_principal_or_other_assets ... ok
+test count_overflow_is_atomic ... ok
+test isolated_fallback_and_batch_produce_same_ledger ... ok
+test empty_batch_emits_no_patch_or_event ... ok
+test mixed_valid_and_replayed_messages_have_independent_statuses ... ok
+test patches_are_sorted_when_input_members_are_not ... ok
+test record_amount_overflow_does_not_block_other_member ... ok
+test multiple_messages_to_same_member_are_coalesced ... ok
+test spoofed_member_source_is_rejected_without_credit ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/governance.rs (target/debug/deps/governance-7e6612459997056c)
+
+running 15 tests
+test active_proposal_cannot_be_replaced ... ok
+test expired_proposal_can_be_replaced_with_next_nonce ... ok
+test executed_proposal_cannot_be_replayed ... ok
+test outsider_cannot_create_or_vote_proposal ... ok
+test proposal_timestamp_overflow_fails_without_changes ... ok
+test fee_change_requires_quorum_and_does_not_change_principal ... ok
+test repeated_vote_cannot_create_quorum ... ok
+test expired_votes_and_execution_are_rejected ... ok
+test proposer_counts_as_one_vote_but_cannot_execute_alone ... ok
+test unsupported_governance_actions_cannot_redirect_money ... ok
+test pause_stops_new_deposits_and_claims ... ok
+test any_distinct_pair_of_managers_forms_quorum ... ok
+test vote_binds_exact_action_and_value ... ok
+test second_signer_and_timelock_are_both_required ... ok
+test resume_restores_operations_without_changing_ownership ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/receiver.rs (target/debug/deps/receiver-66230ca508b38ccd)
+
+running 9 tests
+test accumulated_receipt_overflow_is_rejected ... ok
+test authorized_receipt_echoes_body_and_emits_audit_intent ... ok
+test binding_is_owner_only_and_once_only ... ok
+test deliberate_failure_does_not_change_receipt_counter ... ok
+test receiver_requires_callback_request ... ok
+test receiver_rejects_same_nonce_after_success ... ok
+test duplicate_audit_injection_emits_two_intents_but_one_payment_receipt ... ok
+test wrong_member_or_amount_is_rejected ... ok
+test unauthorized_source_or_external_sender_cannot_receive ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_revenue_vault-02ad33d109e40681)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_contract_sdk
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_revenue_audit
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_revenue_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_revenue_receiver
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_revenue_tests
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_revenue_vault
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
