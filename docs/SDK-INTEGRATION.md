@@ -30,3 +30,10 @@ and narrow coalesced audit patches. The project includes 74 application regressi
 tests, pinned SDK/tooling, reproducible build and optimization evidence, actual AVM
 execution, and reconciled journal replay. It is proposed as an SDK-suite example;
 its asset, routing, callback, and audit-delivery limits are documented.
+
+## SDK 0.2.0
+
+See [the standalone compatibility result](SDK-020.md). In-tree integration must
+use the current SDK path dependency and reviewed lock, without RUSTC_WRAPPER.
+The existing upstream integration PR is #10. Its approval and validation
+are separate from these standalone checks.

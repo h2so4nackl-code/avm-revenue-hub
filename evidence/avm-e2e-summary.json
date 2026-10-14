@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "accounting": {
+    "received": 10010,
+    "paid": 10010,
+    "claimable": 0,
+    "pending": 0,
+    "dust": 0,
+    "paused": false,
+    "claim_attempts": 5,
+    "members": [
+      {
+        "claimable": 0,
+        "paid": 5005,
+        "pending": 0,
+        "last_callback_lt": 56
+      },
+      {
+        "claimable": 0,
+        "paid": 3003,
+        "pending": 0,
+        "last_callback_lt": 64
+      },
+      {
+        "claimable": 0,
+        "paid": 2002,
+        "pending": 0,
+        "last_callback_lt": 72
+      }
+    ]
+  },
+  "receiver_totals": [
+    5005,
+    3003,
+    2002
+  ],
+  "audit_totals": [
+    5005,
+    3003,
+    2002
+  ],
+  "audit_counts": [
+    2,
+    1,
+    1
+  ],
+  "semantic_duplicate_audit_did_not_double_credit": true,
+  "addresses": {
+    "vault": "1111111111111111111111111111111111111111111111111111111111111111:815a7cddebd63dcf90b92fd17625e3dae638037af1d40f6794b0eee40d73d2cc",
+    "audit": "1111111111111111111111111111111111111111111111111111111111111111:276d4a8a47e74214c56c4e89c4cfa654faf36ad724ce90ac45019f133d785778",
+    "receivers": [
+      "1111111111111111111111111111111111111111111111111111111111111111:1b485ce9d93e9bcd603376069beec0cc68c734c131be037f9325dfc3049d2d78",
+      "1111111111111111111111111111111111111111111111111111111111111111:145ad9d675bbb7e34dfcc0dea8ea2e48ce9dfc099c0ea5b82ed4ce94efaf244d",
+      "1111111111111111111111111111111111111111111111111111111111111111:04c73fd9de813c9dbfa58f4aa4ca2ff8ba3dfb4b4b66f047a6122ec91054dbbe"
+    ]
+  },
+  "inspect": {
+    "account_state_root": "8f81b2d76e8ef657609323b38456cc83e6b36538da01f3989ae924f0dbe47c9a",
+    "registry_root": "a2a371b1d0466a72fb0241b7c1738fa21a7fb1bc2f9fa71dd8f60e9e930263d6",
+    "accepted_input_count": 59,
+    "cumulative_fee_shells": "7174396"
+  },
+  "replay": {
+    "account_state_root": "8f81b2d76e8ef657609323b38456cc83e6b36538da01f3989ae924f0dbe47c9a",
+    "registry_root": "a2a371b1d0466a72fb0241b7c1738fa21a7fb1bc2f9fa71dd8f60e9e930263d6",
+    "accepted_input_count": 59,
+    "cumulative_fee_shells": "7174396"
+  },
+  "queue_message_count": 0,
+  "full_journal": "avm-e2e.json.gz"
+}

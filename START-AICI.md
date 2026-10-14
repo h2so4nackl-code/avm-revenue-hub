@@ -11,7 +11,7 @@ Oprirea, reluarea și schimbarea rezervei de execuție cer voturi de la doi dint
 trei administratori și respectarea perioadei de așteptare. Administratorii nu pot
 schimba cotele și nu pot redirecționa principalul prin aceste metode.
 
-Verificările locale includ 74 teste ale proiectului + 12 ale SDK-ului. Demonstrația
+Verificările locale includ 74 teste ale proiectului + 13 ale SDK-ului. Demonstrația
 AVM se încheie cu 10.010 unități locale distribuite astfel: 5.005 + 3.003 + 2.002.
 Receptorii și registrul de audit confirmă aceleași sume; replay-ul este concordant.
 
@@ -34,3 +34,5 @@ Proiectul este verificat într-un mediu AVM local. Nu este o integrare cu o lice
 BM, un miner sau un token NACKL live. Nu este auditat pentru bani reali.
 Repository public: https://github.com/h2so4nackl-code/avm-revenue-hub
 Rezultatele verificărilor automate sunt în fila GitHub Actions.
+
+Compatibilitatea a fost verificată cu SDK 0.2.0 și guest SDK 0.1.1, într-un stand local nou.

@@ -3,3 +3,5 @@
 /.runtime/
 *.state
 __pycache__/
+
+/evidence/avm-e2e.json

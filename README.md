@@ -5,6 +5,14 @@ bound payout receivers, and an AccountBatch audit ledger. Built as a candidate
 for the `gosh-sh/avm-sdk` example and regression suite. It is a local SDK project,
 not an audited mainnet treasury or a mining/licence integration.
 
+## SDK 0.2.0 compatibility
+
+Verified on 14 October 2026 with the published SDK 0.2.0 bundle and its guest SDK
+0.1.1: **74 application + 13 SDK = 87 native tests**, all contract builds and
+lints, and the actual AVM journey/replay passed. [Migration and provenance](docs/SDK-020.md)
+record the exact tools, profile and limitations. [GitHub Actions](https://github.com/h2so4nackl-code/avm-revenue-hub/actions)
+provides the current hosted result. The application contract logic is unchanged.
+
 ## What makes this useful
 
 - **Fixed ownership:** up to 16 beneficiaries with distinct public keys,
@@ -63,7 +71,7 @@ for compute, rent, and delivery is separate from distributed principal.
 
 The deliverable contains actual outputs in [`evidence/`](evidence/):
 
-- 74 project regression tests and 12 unmodified vendored SDK tests.
+- 74 project regression tests and 13 unmodified vendored SDK tests.
 - 4,500 generated action steps, a 10,007-fragment deposit equivalence test,
   full-`u128` arithmetic cases, and 100 failed claims followed by a successful retry.
 - Native and WASM Clippy with `-D warnings`.
@@ -97,7 +105,7 @@ the actual measurements.
 
 ## Reproduce
 
-Requirements: Linux x86-64 (Windows: WSL2), Rustup, Python 3, curl, tar, sha256sum.
+Requirements: Linux x86-64-v3, glibc >=2.39 (Windows: WSL2), Rust/Cargo 1.93.0, Python >=3.11, curl and sha256sum.
 The Rust workspace has no crates.io dependencies; the SDK is vendored unchanged.
 
 ```bash
@@ -174,12 +182,12 @@ ignored by Git; source and build scripts reproduce them.
 
 ## Provenance and official references
 
-- SDK source: [gosh-sh/avm-sdk at `72ee42dbf923f081bf29b4a1a1b6ea012b6af54f`](https://github.com/gosh-sh/avm-sdk/tree/72ee42dbf923f081bf29b4a1a1b6ea012b6af54f)
-- Runtime: [avm-dev-335a0f09fdbc-sdk-0cbca40fad9a](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-335a0f09fdbc-sdk-0cbca40fad9a)
-- Runtime source revision: `335a0f09fdbc98eb7a1056c0f6b84cd4f39d889e`.
+- SDK source: [gosh-sh/avm-sdk at `0748f4f0767a26da8bc363bcb6b5585539d6970e`](https://github.com/gosh-sh/avm-sdk/tree/0748f4f0767a26da8bc363bcb6b5585539d6970e)
+- Runtime: [avm-dev-06e96ef71006-sdk-0748f4f0767a](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-06e96ef71006-sdk-0748f4f0767a)
+- Runtime source revision: `06e96ef71006cca020575cbf35e6b82cc82a324e`.
 - Optimizer: [WebAssembly/binaryen version_133](https://github.com/WebAssembly/binaryen/releases/tag/version_133).
-- SDK source and runtime are different pinned revisions. Actual E2E evidence
-  validates this combination, not an unpublished runtime.
+- Guest SDK source matches the published bundle SDK revision. Actual E2E
+  uses the shipped SDK 0.2.0 runtime and profile in a fresh stand.
 
 See `PROVENANCE.json`, `evidence/runtime-build-manifest.json`, and `SHA256SUMS`.
 MIT licensed, with the upstream SDK license retained.

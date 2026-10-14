@@ -1,0 +1,25 @@
+rustc 1.93.0 (254b59607 2026-01-19)
+binary: rustc
+commit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c
+commit-date: 2026-01-19
+host: x86_64-unknown-linux-gnu
+release: 1.93.0
+LLVM version: 21.1.8
+
+cargo 1.93.0 (083ac5135 2025-12-15)
+release: 1.93.0
+commit-hash: 083ac5135f967fd9dc906ab057a2315861c7a80d
+commit-date: 2025-12-15
+host: x86_64-unknown-linux-gnu
+libgit2: 1.9.1 (sys:0.20.2 vendored)
+libcurl: 8.15.0-DEV (sys:0.4.83+curl-8.15.0 vendored ssl:OpenSSL/3.5.4)
+ssl: OpenSSL 3.5.4 30 Sep 2025
+os: Ubuntu 24.4.0 (noble) [64-bit]
+
+linker: LLD 21.1.8 (/checkout/src/llvm-project/llvm 85a90d119deb25b518867cd37d62c7b93b575a6f)
+linker_blake3: 1285a9662c675a38d4223e88f70422b37c2d2c4427c5b46445430c756e9ada05
+lock_blake3: e1639651082c368ddfaf089b8a5b95d344b95db7344e0a26f0b53fce665c88b3
+target: wasm32-unknown-unknown
+locked: true
+source_date_epoch: 0
+rustflags: -Cpanic=abort -Cdebuginfo=0 -Cstrip=symbols -Ctarget-feature=+bulk-memory,+sign-ext,-extended-const,-multivalue,-nontrapping-fptoint,-reference-types,-relaxed-simd,-simd128,-tail-call -Clink-arg=--no-entry -Clink-arg=--export-memory -Clink-arg=--initial-heap=65536 -Clink-arg=--max-memory=33554432 -Clink-arg=--compress-relocations

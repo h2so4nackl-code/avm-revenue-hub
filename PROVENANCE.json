@@ -1,28 +1,24 @@
 {
-  "validated_date": "2026-10-12",
   "sdk_repository": "https://github.com/gosh-sh/avm-sdk",
-  "vendored_sdk_commit": "72ee42dbf923f081bf29b4a1a1b6ea012b6af54f",
-  "runtime_release": "avm-dev-335a0f09fdbc-sdk-0cbca40fad9a",
-  "runtime_sdk_commit": "0cbca40fad9a8f11863197cbcbaf6208651752b9",
-  "runtime_source_commit": "335a0f09fdbc98eb7a1056c0f6b84cd4f39d889e",
-  "runtime_archive_sha256": "2171ee865bc9fc2e1a1274dfdd0f4330dc362b1f49d38c0a35c4de41aa61d6f3",
-  "optimizer_repository": "https://github.com/WebAssembly/binaryen",
-  "optimizer_release": "version_133",
-  "optimizer_archive_sha256": "2dc9c7813f5375db93d96ead4b78222fcc3e2677bbb832297af4797782a37489",
-  "rust": "1.93.0",
+  "sdk_bundle_version": "0.2.0",
+  "guest_sdk_version": "0.1.1",
+  "vendored_sdk_commit": "0748f4f0767a26da8bc363bcb6b5585539d6970e",
+  "runtime_release_tag": "avm-dev-06e96ef71006-sdk-0748f4f0767a",
+  "runtime_sdk_commit": "0748f4f0767a26da8bc363bcb6b5585539d6970e",
+  "runtime_source_commit": "06e96ef71006cca020575cbf35e6b82cc82a324e",
+  "runtime_archive_sha256": "8728497cf1e476d3d770a09b19929f7c196f2637654642727432b4c285c85143",
+  "rust_toolchain": "1.93.0",
   "target": "wasm32-unknown-unknown",
-  "compiler_profile": {
-    "opt_level": 3,
-    "lto": false,
-    "codegen_units": 1,
-    "strip": "symbols"
-  },
-  "vendored_sdk_file_sha256": {
-    "vendor/avm-contract-sdk/Cargo.toml": "3613f075d7aadaa6ad8cb8bf13914b5e8d7391c01d04702f6ca16baf2ee30308",
+  "profile_sha256": "eafd9ee1589b24c8fba8f5212c0571bd796bfc127aeae0edfb5697bd477b39d8",
+  "project_lock_sha256": "f4c683993d93f26e00ac6c588071c7eb7f7df7a99cd8701806d77bd20fd55802",
+  "vendor_source_sha256": {
+    "vendor/SDK-LICENSE.md": "7a4ad0e41d39f4d14f0cd83cdc8e542d214375aa615daa3d5aa946b9c8aea4fa",
+    "vendor/avm-contract-sdk/Cargo.toml": "7b1d345c8e07b9de62cb5caecb74755de641b963e5e93ef2dbadbdeced10489b",
     "vendor/avm-contract-sdk/src/input.rs": "cc3f40e42be8223cc8167a5e5e3d6fc645df58f7599bf9d1d565c116bf72262e",
     "vendor/avm-contract-sdk/src/lib.rs": "459353d7f7f88d16db66124db9ef96a534f656400e168145a924a53e35b5f198",
     "vendor/avm-contract-sdk/src/output.rs": "8b0e79172ea16a56837069e99fa659ebf235253402cee8821568e40c67e465be",
-    "vendor/avm-contract-sdk/src/runtime.rs": "0f50f3cf87d8249e3785734418dd12f52992aa32d158748d758a0ef2e9320c2e",
-    "vendor/avm-contract-sdk/tests/canonical_io.rs": "66051869e58fff5534e0fa02e2aceba9af371d892d218b60ca3ced9af6745361"
+    "vendor/avm-contract-sdk/src/runtime.rs": "23d9357612758db29e67fdfe3f6f0cd48ef53cada7615ba162cf326bd2dc93f5",
+    "vendor/avm-contract-sdk/tests/canonical_io.rs": "66051869e58fff5534e0fa02e2aceba9af371d892d218b60ca3ced9af6745361",
+    "vendor/sdk-release-verifier.py": "98cde34283e648a98d0e1c0868a978e3f23a547a8d87aa1de6e751ef6b1e0520"
   }
 }

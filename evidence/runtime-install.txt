@@ -1,0 +1,3 @@
+/workspace/scratch/e13110dd4624/sdk020-installer-test/downloads/avm-dev-06e96ef71006-sdk-0748f4f0767a/avm-sdk-linux-x86_64.tar.gz: OK
+installed verified avm-dev-06e96ef71006-sdk-0748f4f0767a under /workspace/scratch/e13110dd4624/sdk020-installer-test/sdk/releases/avm-dev-06e96ef71006-sdk-0748f4f0767a/avm-sdk-linux-x86_64
+Verified SDK 0.2.0 ready: /workspace/scratch/e13110dd4624/sdk020-installer-test/avm-sdk-linux-x86_64

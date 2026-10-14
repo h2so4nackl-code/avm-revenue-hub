@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "bundle_version": "0.2.0",
+  "guest_version": "0.1.1",
+  "release_tag": "avm-dev-06e96ef71006-sdk-0748f4f0767a",
+  "sdk_commit": "0748f4f0767a26da8bc363bcb6b5585539d6970e",
+  "runtime_source_commit": "06e96ef71006cca020575cbf35e6b82cc82a324e",
+  "profile_sha256": "eafd9ee1589b24c8fba8f5212c0571bd796bfc127aeae0edfb5697bd477b39d8",
+  "binary_sha256": {
+    "avm-contract-build": "d2814c83958f9681845708516e7408fd7e9166c269737c66fbc112f7ea13c49e",
+    "avm-local-stand": "2599204d32a8100847a086c95e16f589589644bf6072496cc19c1e172fb7f586"
+  },
+  "builder_version": "avm-contract-build 0.1.0",
+  "rustc": "rustc 1.93.0 (254b59607 2026-01-19)",
+  "project_lock_sha256": "f4c683993d93f26e00ac6c588071c7eb7f7df7a99cd8701806d77bd20fd55802",
+  "reviewed_lock_packages": [
+    {
+      "name": "avm-contract-sdk",
+      "version": "0.1.1"
+    },
+    {
+      "name": "avm-revenue-audit",
+      "version": "0.1.0",
+      "dependencies": [
+        "avm-contract-sdk",
+        "avm-revenue-core"
+      ]
+    },
+    {
+      "name": "avm-revenue-core",
+      "version": "0.1.0",
+      "dependencies": [
+        "avm-contract-sdk"
+      ]
+    },
+    {
+      "name": "avm-revenue-receiver",
+      "version": "0.1.0",
+      "dependencies": [
+        "avm-contract-sdk",
+        "avm-revenue-core"
+      ]
+    },
+    {
+      "name": "avm-revenue-tests",
+      "version": "0.1.0",
+      "dependencies": [
+        "avm-contract-sdk",
+        "avm-revenue-audit",
+        "avm-revenue-core",
+        "avm-revenue-receiver",
+        "avm-revenue-vault"
+      ]
+    },
+    {
+      "name": "avm-revenue-vault",
+      "version": "0.1.0",
+      "dependencies": [
+        "avm-contract-sdk",
+        "avm-revenue-core"
+      ]
+    }
+  ],
+  "dependencies": "Only reviewed local path packages; no registry dependencies",
+  "fresh_local_stands": true
+}
