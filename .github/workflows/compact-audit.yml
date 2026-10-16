@@ -1,0 +1,49 @@
+name: Compact audit experiment
+on:
+  push:
+    paths:
+      - 'experiments/compact-audit/**'
+      - 'core/**'
+      - 'contracts/**'
+      - 'vendor/**'
+      - 'scripts/**'
+      - 'Cargo.*'
+      - 'rust-toolchain.toml'
+      - '.github/workflows/compact-audit.yml'
+  pull_request:
+    paths:
+      - 'experiments/compact-audit/**'
+      - 'core/**'
+      - 'contracts/**'
+      - 'vendor/**'
+      - 'scripts/**'
+      - 'Cargo.*'
+      - 'rust-toolchain.toml'
+      - '.github/workflows/compact-audit.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install pinned Rust
+        run: |
+          rustup toolchain install 1.93.0 --profile minimal --component rustfmt --component clippy
+          rustup target add wasm32-unknown-unknown --toolchain 1.93.0
+      - name: Download and verify pinned AVM release
+        run: |
+          bash scripts/install_runtime.sh
+          bash scripts/install_binaryen.sh
+      - name: Validate contracts and actual local stand journey
+        run: bash experiments/compact-audit/scripts/verify.sh "$PWD/.runtime/avm-sdk-linux-x86_64" "$PWD/.runtime/binaryen-version_133/bin/wasm-opt"
+      - name: Upload validation evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: compact-audit-validation-evidence
+          path: experiments/compact-audit/evidence/
