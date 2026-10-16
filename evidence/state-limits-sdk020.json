@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "scope": "Published SDK 0.2.0 local stand only",
+  "release_tag": "avm-dev-06e96ef71006-sdk-0748f4f0767a",
+  "runtime_source": "06e96ef71006cca020575cbf35e6b82cc82a324e",
+  "fixture_sha256": "d09d1ec4239f63bd3353d3417ddbe0fec4a317b585cec5fd4486f64d330c3b74",
+  "threshold_cases": [
+    {
+      "canonical_account_bytes": 65535,
+      "data_bytes": 65460,
+      "first_update": {
+        "mode": "FullReplace",
+        "data_bytes": 65460,
+        "output_bytes": 65493
+      },
+      "wrong_mode": {
+        "error": "call rejected canonical operation: local call returned VM status 43",
+        "status": "error"
+      },
+      "next_update": {
+        "mode": "FullReplace",
+        "data_bytes": 65460,
+        "output_bytes": 65493
+      }
+    },
+    {
+      "canonical_account_bytes": 65536,
+      "data_bytes": 65461,
+      "first_update": {
+        "mode": "FullReplace",
+        "data_bytes": 65461,
+        "output_bytes": 65494
+      },
+      "wrong_mode": {
+        "error": "call rejected canonical operation: local call returned VM status 43",
+        "status": "error"
+      },
+      "next_update": {
+        "mode": "FullReplace",
+        "data_bytes": 65461,
+        "output_bytes": 65494
+      }
+    },
+    {
+      "canonical_account_bytes": 65537,
+      "data_bytes": 65462,
+      "first_update": {
+        "mode": "DataPatchList",
+        "data_bytes": 65462,
+        "output_bytes": 46
+      },
+      "wrong_mode": {
+        "error": "call rejected canonical operation: local call returned VM status 43",
+        "status": "error"
+      },
+      "next_update": {
+        "mode": "DataPatchList",
+        "data_bytes": 65462,
+        "output_bytes": 46
+      }
+    }
+  ],
+  "balance_transition": {
+    "previous_canonical_bytes": 65536,
+    "incoming_new_currency_call": {
+      "mode": "FullReplace",
+      "data_bytes": 65461,
+      "output_bytes": 65494
+    },
+    "resulting_canonical_bytes": 65556,
+    "following_call": {
+      "mode": "DataPatchList",
+      "data_bytes": 65461,
+      "output_bytes": 46
+    }
+  },
+  "replay_matches": true,
+  "candidate_executed": false,
+  "mainnet_deployment": false,
+  "real_funds": false
+}

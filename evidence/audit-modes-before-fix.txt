@@ -1,0 +1,45 @@
+   Compiling avm-revenue-tests v0.1.0 (/workspace/scratch/13fc6a959bee/avm-revenue-hub/tests)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.16s
+     Running tests/audit_modes.rs (target/debug/deps/audit_modes-fca211d4e0a7a6ad)
+
+running 6 tests
+test initialization_requires_full_replace_and_rejects_patch_without_effects ... FAILED
+test first_post_init_binding_already_uses_patch_and_preserves_all_other_bytes ... ok
+test malformed_batch_state_and_oversized_batch_fail_atomically_in_both_modes ... FAILED
+test incompatible_batch_mode_is_rejected_with_matching_unchanged_output ... FAILED
+test isolated_binding_status_and_receipt_follow_runtime_mode ... ok
+test all_sixteen_members_produce_sorted_disjoint_bounded_patches ... ok
+
+failures:
+
+---- initialization_requires_full_replace_and_rejects_patch_without_effects stdout ----
+
+thread 'initialization_requires_full_replace_and_rejects_patch_without_effects' (91) panicked at tests/tests/support/mod.rs:184:5:
+assertion `left == right` failed
+  left: 0
+ right: 3200
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- malformed_batch_state_and_oversized_batch_fail_atomically_in_both_modes stdout ----
+
+thread 'malformed_batch_state_and_oversized_batch_fail_atomically_in_both_modes' (93) panicked at tests/tests/audit_modes.rs:123:13:
+assertion `left == right` failed
+  left: DataPatchList
+ right: FullReplace
+
+---- incompatible_batch_mode_is_rejected_with_matching_unchanged_output stdout ----
+
+thread 'incompatible_batch_mode_is_rejected_with_matching_unchanged_output' (90) panicked at tests/tests/audit_modes.rs:105:9:
+assertion `left == right` failed
+  left: DataPatchList
+ right: FullReplace
+
+
+failures:
+    incompatible_batch_mode_is_rejected_with_matching_unchanged_output
+    initialization_requires_full_replace_and_rejects_patch_without_effects
+    malformed_batch_state_and_oversized_batch_fail_atomically_in_both_modes
+
+test result: FAILED. 3 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p avm-revenue-tests --test audit_modes`

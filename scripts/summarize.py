@@ -16,11 +16,15 @@ def run():
     journey_path = ROOT/'evidence/avm-e2e.json'
     journey = json.loads(journey_path.read_text())
     assert runtime['status'] == journey['status'] == 'PASS'
+    state_limits = json.loads((ROOT/'evidence/state-limits-sdk020.json').read_text())
+    guest_modes = json.loads((ROOT/'evidence/audit-guest-modes.json').read_text())
+    assert state_limits['status'] == guest_modes['status'] == 'PASS'
+    assert not state_limits['candidate_executed'] and not state_limits['mainnet_deployment']
     counts = [int(n) for n in re.findall(r'test result: ok\. (\d+) passed;', (ROOT/'evidence/native-tests.txt').read_text())]
     assert counts and 9 in counts and 4 in counts
     members = tomllib.loads((ROOT/'Cargo.toml').read_text())['workspace']['members']
     expected, project = next((count,name) for member,count,name in [
-        ('contracts/escrow',35,'avm-bounty-escrow'),('contracts/vault',74,'avm-revenue-hub'),
+        ('contracts/escrow',35,'avm-bounty-escrow'),('contracts/vault',80,'avm-revenue-hub'),
         ('contracts/vesting',60,'avm-vesting-streams')] if member in members)
     assert sum(counts) == expected+13, counts
     keys = ['account_state_root','registry_root','accepted_input_count','cumulative_fee_shells']
@@ -37,6 +41,7 @@ def run():
     write(ROOT/'evidence/avm-e2e-summary.json',summary)
     artifacts = json.loads((ROOT/'evidence/artifacts.json').read_text())
     assert artifacts['status'] == 'PASS'
+    assert guest_modes['wasm_sha256'] == artifacts['contracts']['audit']['sha256']['contract.wasm']
     for contract in artifacts['contracts']:
         directory = ROOT/'contracts'/contract/'target'
         shutil.copyfile(directory/'avm-build-provenance.txt',ROOT/'evidence'/f'build-provenance-{contract}.txt')
@@ -52,6 +57,10 @@ def run():
     write(ROOT/'PROVENANCE.json',provenance)
     validation = dict(status='PASS',project=project,sdk_bundle_version='0.2.0',guest_sdk_version='0.1.1',
                       project_tests=expected,sdk_tests=13,total_tests=expected+13,
+                      state_limits_evidence='state-limits-sdk020.json',
+                      audit_guest_modes_evidence='audit-guest-modes.json',
+                      audit_state_limits=journey['audit_state_limits'],
+                      candidate_runtime_executed=False,
                       actual_avm_accounting=journey['accounting'],replay_roots_fees_and_count_match=True,
                       queue_message_count=0,fresh_local_stand=True,full_journal='avm-e2e.json.gz',
                       full_journal_sha256=hashlib.sha256(compressed).hexdigest(),
