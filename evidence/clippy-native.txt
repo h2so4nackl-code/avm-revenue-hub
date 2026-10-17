@@ -1,1 +1,2 @@
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+    Checking avm-revenue-tests v0.1.0 (/workspace/scratch/13fc6a959bee/avm-revenue-hub/tests)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.13s

@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "Guest ABI only; published guest SDK 0.1.1, Node WebAssembly engine",
+  "wasm_sha256": "e786f0e8c632d314bbb5c73e9af7e2a151923117b560935d449c5f166d09d421",
+  "cases": [
+    {
+      "name": "init-FullReplace",
+      "entrypoint": "init",
+      "input_bytes": 875,
+      "output_bytes": 65573
+    },
+    {
+      "name": "batch-valid-FullReplace",
+      "entrypoint": "process_batch",
+      "input_bytes": 65975,
+      "output_bytes": 65568
+    },
+    {
+      "name": "batch-empty-FullReplace",
+      "entrypoint": "process_batch",
+      "input_bytes": 65754,
+      "output_bytes": 65564
+    },
+    {
+      "name": "batch-oversized-FullReplace",
+      "entrypoint": "process_batch",
+      "input_bytes": 122551,
+      "output_bytes": 66592
+    },
+    {
+      "name": "batch-invalid-state-FullReplace",
+      "entrypoint": "process_batch",
+      "input_bytes": 435,
+      "output_bytes": 28
+    },
+    {
+      "name": "init-DataPatchList",
+      "entrypoint": "init",
+      "input_bytes": 875,
+      "output_bytes": 25
+    },
+    {
+      "name": "batch-valid-DataPatchList",
+      "entrypoint": "process_batch",
+      "input_bytes": 65975,
+      "output_bytes": 219
+    },
+    {
+      "name": "batch-empty-DataPatchList",
+      "entrypoint": "process_batch",
+      "input_bytes": 65754,
+      "output_bytes": 24
+    },
+    {
+      "name": "batch-oversized-DataPatchList",
+      "entrypoint": "process_batch",
+      "input_bytes": 122551,
+      "output_bytes": 1052
+    },
+    {
+      "name": "batch-invalid-state-DataPatchList",
+      "entrypoint": "process_batch",
+      "input_bytes": 435,
+      "output_bytes": 28
+    }
+  ]
+}

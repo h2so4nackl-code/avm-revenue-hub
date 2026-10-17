@@ -26,7 +26,7 @@ AVM Revenue Hub is a three-contract Rust SDK reference application: a 2-of-3
 governed revenue vault, bound payout receivers, and an AccountBatch receipt ledger.
 It demonstrates fixed-share cumulative accounting, independent beneficiary claims,
 native failure/refund/retry handling, exact-proposal votes with timelock and expiry,
-and narrow coalesced audit patches. The project includes 74 application regression
+and narrow coalesced audit patches. The project includes 80 application regression
 tests, pinned SDK/tooling, reproducible build and optimization evidence, actual AVM
 execution, and reconciled journal replay. It is proposed as an SDK-suite example;
 its asset, routing, callback, and audit-delivery limits are documented.

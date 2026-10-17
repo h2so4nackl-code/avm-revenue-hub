@@ -7,11 +7,15 @@ not an audited mainnet treasury or a mining/licence integration.
 
 ## SDK 0.2.0 compatibility
 
-Verified on 14 October 2026 with the published SDK 0.2.0 bundle and its guest SDK
-0.1.1: **74 application + 13 SDK = 87 native tests**, all contract builds and
+Requalified on 16 October 2026 with the published SDK 0.2.0 bundle and its guest SDK
+0.1.1: **80 application + 13 SDK = 93 native tests**, all contract builds and
 lints, and the actual AVM journey/replay passed. [Migration and provenance](docs/SDK-020.md)
 record the exact tools, profile and limitations. [GitHub Actions](https://github.com/h2so4nackl-code/avm-revenue-hub/actions)
-provides the current hosted result. The application contract logic is unchanged.
+provides the current hosted result. The [state-limit review](docs/STATE-LIMITS.md)
+checks the whole canonical account threshold, first post-init patch, both mode
+rejections and batch limits. Two audit error paths were corrected; financial
+accounting and beneficiary rules are unchanged. The unpublished candidate was
+compared only against its maintainer's documented rules, not executed.
 
 ## What makes this useful
 
@@ -71,7 +75,9 @@ for compute, rent, and delivery is separate from distributed principal.
 
 The deliverable contains actual outputs in [`evidence/`](evidence/):
 
-- 74 project regression tests and 13 unmodified vendored SDK tests.
+- 80 project regression tests and 13 unmodified vendored SDK tests.
+- Exact 65,535 / 65,536 / 65,537-byte whole-account runtime cases, a balance-driven
+  mode transition, and 10 actual audit WASM/native ABI comparisons.
 - 4,500 generated action steps, a 10,007-fragment deposit equivalence test,
   full-`u128` arithmetic cases, and 100 failed claims followed by a successful retry.
 - Native and WASM Clippy with `-D warnings`.
@@ -105,7 +111,7 @@ the actual measurements.
 
 ## Reproduce
 
-Requirements: Linux x86-64-v3, glibc >=2.39 (Windows: WSL2), Rust/Cargo 1.93.0, Python >=3.11, curl and sha256sum.
+Requirements: Linux x86-64-v3, glibc >=2.39 (Windows: WSL2), Rust/Cargo 1.93.0, Python >=3.11, Node >=18, curl and sha256sum.
 The Rust workspace has no crates.io dependencies; the SDK is vendored unchanged.
 
 ```bash

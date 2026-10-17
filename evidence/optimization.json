@@ -12,24 +12,24 @@
   ],
   "contracts": {
     "vault": {
-      "compiler_bytes": 66239,
-      "optimized_bytes": 58804,
-      "compiler_sha256": "e3054c7a0ed36020b6a7fab452cec015458ae7c5e4969fa1accf2a42b2fdee75",
-      "optimized_sha256": "2387373f2a70fb71b3a3fa0682d1ca78b4bbda6b15da029d4986592984f200d0",
+      "compiler_bytes": 66235,
+      "optimized_bytes": 58800,
+      "compiler_sha256": "700945686aaa0c8c8757ac88b669051baf2ba43c7641840bd8d89f285f7a4f8d",
+      "optimized_sha256": "7231efd52aecbbaa02e3c6b5e0ca3233ba0f233e21dff777efe405e1b9cae23a",
       "two_independent_optimizer_outputs_match": true
     },
     "receiver": {
-      "compiler_bytes": 42065,
-      "optimized_bytes": 37746,
-      "compiler_sha256": "e5452b58f00eaa3a4338640a730a6dea7d4c57b09272c0120f03f6d8a0e80f04",
-      "optimized_sha256": "aefd91f27bf8610862254bbb6ffaf0cb8b3b7ee908c14c0581f0011c40d2900a",
+      "compiler_bytes": 42061,
+      "optimized_bytes": 37742,
+      "compiler_sha256": "f759a3a3df63a7b2544f9793ecefe0f496ca2d4c83d6b0cbb6102abb06a2e7cf",
+      "optimized_sha256": "1cb27343f63d4a13ee2c46af330342db894d9889af9686750da632c6cd9d9372",
       "two_independent_optimizer_outputs_match": true
     },
     "audit": {
-      "compiler_bytes": 62270,
-      "optimized_bytes": 56050,
-      "compiler_sha256": "98b5511bd7fbceed00157b57a3526f4993b87ccff0cf14bf6e13aedf41aa8193",
-      "optimized_sha256": "906fade586c3e677ae3c70ccefde8dfb6fab9573f96cf36ac158d81d32a730af",
+      "compiler_bytes": 62516,
+      "optimized_bytes": 56283,
+      "compiler_sha256": "a069c45e4f65df95266243c2b380d5553684c03334de825c4e8b19b1b5b9dfce",
+      "optimized_sha256": "e786f0e8c632d314bbb5c73e9af7e2a151923117b560935d449c5f166d09d421",
       "two_independent_optimizer_outputs_match": true
     }
   }
